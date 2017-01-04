@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
 		jQuery('#chat_log').append(li);
 	};
 
-	var socket = io.connect();
+	var socket = io.connect('http://localhost');
 
 	socket.on('entrance', function  (data) {
 		log_chat_message(data.message, 'system');
